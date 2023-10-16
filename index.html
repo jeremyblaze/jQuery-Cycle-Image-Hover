@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Cycle Image On Hover</title>
+    <style type="text/css">
+
+        body {
+            max-width: 700px;
+            margin: 100px auto;
+        }
+
+        .hoverimg {
+            width: 300px;
+        }
+
+        img {
+            width: 100%;
+        }
+
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="jquery.cycleImages.js"></script>
+</head>
+<body>
+
+    <h1>jQuery Cycle Image On Hover</h1>
+    By <a href="https://jeremyblaze.com/?ref=jquerycycleimage">Jeremy Blaze</a> &bull; <a href="#">View on GitHub</a>
+
+    <br /><br />
+    <hr />
+    <br /><br />
+
+    <div class="hoverimg">
+        <div class="cover">
+            <img src="example-images/marathon/1.png">
+        </div>
+        <div class="gallery" style="display:none">
+            <img src="example-images/marathon/1.png">
+            <img src="example-images/marathon/2.png">
+            <img src="example-images/marathon/3.png">
+            <img src="example-images/marathon/4.png">
+            <img src="example-images/marathon/5.png">
+        </div>
+    </div>
+
+    <br /><br />
+
+    <div class="hoverimg">
+        <div class="cover">
+            <img src="example-images/cuebox/1.png">
+        </div>
+        <div class="gallery" style="display:none">
+            <img src="example-images/cuebox/1.png">
+            <img src="example-images/cuebox/2.png">
+            <img src="example-images/cuebox/3.png">
+            <img src="example-images/cuebox/4.png">
+            <img src="example-images/cuebox/5.png">
+        </div>
+    </div>
+
+    <br /><br />
+
+    <div class="hoverimg">
+        <div class="cover">
+            <img src="example-images/showwcase/1.png">
+        </div>
+        <div class="gallery" style="display:none">
+            <img src="example-images/showwcase/1.png">
+            <img src="example-images/showwcase/2.png">
+            <img src="example-images/showwcase/3.png">
+            <img src="example-images/showwcase/4.png">
+            <img src="example-images/showwcase/5.png">
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+            $('.hoverimg').each(function(){
+                $(this).cycleImages({
+                    cover: $(this).find('.cover'),
+                    gallery: $(this).find('.gallery'),
+                    interval: 280
+                });
+            });
+        });
+
+    </script>
+
+</body>
+</html>
