@@ -29,25 +29,22 @@
         settings.gallery.find('img').eq(2).show(0);
 
         var hoverInterval;
-        $(this).hover(function(){
+        $(this).hover(function() {
+            settings.gallery.show(0);
 
-            $(settings.gallery).show(0);
-
-            hoverInterval = setInterval(function(){
+            hoverInterval = setInterval(function() {
                 var currentImage = settings.gallery.find('img:visible');
-                if ( !currentImage ) {
-                    var currentImage = settings.gallery.find('img').eq(0);
-                }
-                var nextImage = currentImage.next('img');
-                if (nextImage.length === 0) {
-                    nextImage = settings.gallery.find('img:first');
-                }
+                var allImages = settings.gallery.find('img');
+                var currentIndex = allImages.index(currentImage);
+                var nextIndex = (currentIndex + 1) % allImages.length;
+
                 currentImage.hide(0);
-                nextImage.show(0);    
+                allImages.eq(nextIndex).show(0);
+
             }, settings.interval);
 
-        }, function(){
-            $(settings.gallery).hide(0);
+        }, function() {
+            settings.gallery.hide(0);
             clearInterval(hoverInterval);
         });
 
