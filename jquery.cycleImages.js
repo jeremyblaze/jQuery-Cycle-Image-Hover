@@ -36,7 +36,7 @@
             hoverInterval = setInterval(function(){
                 var currentImage = settings.gallery.find('img:visible');
                 if ( !currentImage ) {
-                    var currentImage = settings.gallery.find('img').eq(2);
+                    var currentImage = settings.gallery.find('img').eq(0);
                 }
                 var nextImage = currentImage.next('img');
                 if (nextImage.length === 0) {
