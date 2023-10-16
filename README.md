@@ -1,4 +1,6 @@
 # jQuery Cycle Image On Hover
+
+**[See a demo](https://jeremyblaze.github.io/jQuery-Cycle-Image-Hover/)**
 By [Jeremy Blaze](https://jeremyblaze.com/?ref=jquerycycleimage)
 
 ### Step 1. Install
